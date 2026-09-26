@@ -1,0 +1,25 @@
+{
+  "catalog_version": "8778968335",
+  "solutions_total": 189,
+  "from_open_sources": 2,
+  "with_price": 189,
+  "with_payload": 22,
+  "with_throughput": 39,
+  "with_confirmed_specs": 9,
+  "by_object_type": {
+    "warehouse": 44,
+    "airport": 38,
+    "clinic": 31,
+    "custom": 0
+  },
+  "presets": {
+    "warehouse": 42,
+    "airport": 39,
+    "clinic": 57,
+    "custom": 15
+  },
+  "gaps": {
+    "payload_missing": 167,
+    "comment": "Недостающие обязательные ТТХ добиваются вручную через админку с указанием источника (п. 3.3.3-3.3.5 ТЗ)."
+  }
+}

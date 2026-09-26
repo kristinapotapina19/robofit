@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "purpose": "Решения, добавленные командой из открытых источников (пояснения к ТЗ, п. 3.2). Критерий отбора: решение закрывает операцию медучреждения, для которой в каталоге организатора нет подходящих позиций (доставка лотков, контейнеров и тележек внутри здания с лифтами), продаётся в России и имеет опубликованные ТТХ и цену.",
+    "limit": "не более 5 позиций на тип объекта"
+  },
+  "solutions": [
+    {
+      "external_id": "os-pudu-t300",
+      "name": "Pudu T300 (грузоподъемность до 300 кг)",
+      "vendor": "Pudu Robotics (дистрибьюторы в РФ)",
+      "country": "Китай",
+      "status": "operation",
+      "trl": 9,
+      "subtype": "Робот-доставщик",
+      "scenarios": ["Доставка внутри здания", "Внутрискладская логистика"],
+      "industry": "Торговля и услуги",
+      "description": "Грузовой сервисный робот для внутренней логистики: перевозка тележек и контейнеров до 300 кг, навигация VSLAM+ и лидар, работа с лифтами в комплектации с интеграцией.",
+      "price_rub": 1245000,
+      "price_note": "Цена дистрибьютора «от», руб. с НДС; интеграция с лифтами — отдельно",
+      "specs": {
+        "payload_kg": 300, "speed_ms": 1.2, "runtime_h": 6, "charge_min": 120,
+        "length_mm": 830, "width_mm": 500, "height_mm": 1350, "robot_mass_kg": 65,
+        "min_aisle_mm": 600, "navigation": "VSLAM+ и лидар"
+      },
+      "source_url": "https://robort.ru/product/pudu-robotics/robot-dostavshchik-pudu-t300/",
+      "retrieved_at": "2026-09-26"
+    },
+    {
+      "external_id": "os-pudubot-2",
+      "name": "PuduBot 2 (грузоподъемность до 10 кг на лоток)",
+      "vendor": "Pudu Robotics (дистрибьюторы в РФ)",
+      "country": "Китай",
+      "status": "operation",
+      "trl": 9,
+      "subtype": "Робот-доставщик",
+      "scenarios": ["Доставка внутри здания"],
+      "industry": "Торговля и услуги",
+      "description": "Робот-доставщик с закрытыми лотками для медикаментов, проб и документов. ТТХ по документу организатора «Примеры решений», цена — по данным дистрибьютора.",
+      "price_rub": 1150000,
+      "price_note": "Цена дистрибьютора, руб. с НДС",
+      "specs": {
+        "payload_kg": 10, "speed_ms": 0.85, "runtime_h": 12, "charge_min": 240,
+        "length_mm": 580, "width_mm": 535, "height_mm": 1290, "robot_mass_kg": 39,
+        "min_aisle_mm": 800, "navigation": "VSLAM и лазерный SLAM",
+        "throughput_per_h": 15, "throughput_unit": "доставок/ч"
+      },
+      "source_url": "https://www.kiit.ru/product/universalnyy-robot-dostavshchik-pudubot-2/",
+      "retrieved_at": "2026-09-26"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "source": "Примеры решений по типам объектов (документ организатора)",
+    "confirmed": true,
+    "note": "ТТХ приведены организатором на примере конкретных моделей. При выборе другой модели значения уточняются по сайту производителя и помечаются своим источником."
+  },
+  "models": [
+    {
+      "match": [
+        "ronavi h1500",
+        "ronavi h1"
+      ],
+      "model": "Ronavi H1500",
+      "specs": {
+        "payload_kg": 1500,
+        "robot_mass_kg": 250,
+        "length_mm": 1044,
+        "width_mm": 654,
+        "height_mm": 380,
+        "speed_ms": 1.5,
+        "navigation": "QR-метки и SLAM",
+        "charge_min": 18,
+        "runtime_h": 6,
+        "throughput_per_h": 90,
+        "throughput_unit": "паллет/ч",
+        "positioning_mm": 3
+      }
+    },
+    {
+      "match": [
+        "dmr carrier",
+        "carrier p"
+      ],
+      "model": "DMR Carrier P",
+      "specs": {
+        "payload_kg": 1500,
+        "lift_height_mm": 1600,
+        "speed_ms": 1.5,
+        "runtime_h": 10,
+        "navigation": "SLAM на базе лидаров",
+        "robot_mass_kg": 2250,
+        "length_mm": 1000,
+        "width_mm": 1975,
+        "height_mm": 2050,
+        "throughput_per_h": 50,
+        "throughput_unit": "паллет/ч"
+      }
+    },
+    {
+      "match": [
+        "mark 2 se",
+        "mark2"
+      ],
+      "model": "MARK 2 SE",
+      "specs": {
+        "tank_l": 40,
+        "cleaning_width_cm": 51,
+        "runtime_h": 3,
+        "charge_h": 2,
+        "throughput_per_h": 1000,
+        "throughput_unit": "м²/ч",
+        "length_mm": 860,
+        "width_mm": 610,
+        "height_mm": 980,
+        "robot_mass_kg": 165,
+        "speed_ms": 0.97,
+        "navigation": "лидар и камеры"
+      }
+    },
+    {
+      "match": [
+        "pallet shuttle",
+        "стелкон",
+        "stelkon",
+        "шаттл"
+      ],
+      "model": "Pallet Shuttle (Stelkon)",
+      "specs": {
+        "payload_kg": 1500,
+        "max_rack_height_m": 13.5,
+        "speed_ms": 0.9,
+        "runtime_h": 9,
+        "length_mm": 1200,
+        "width_mm": 800,
+        "height_mm": 200,
+        "throughput_per_h": 100,
+        "throughput_unit": "паллет/ч на канал"
+      }
+    },
+    {
+      "match": [
+        "cognitive pilot",
+        "когнитив пилот"
+      ],
+      "model": "Беспилотный тягач (Cognitive Pilot)",
+      "specs": {
+        "payload_kg": 3000,
+        "runtime_h": 24,
+        "speed_ms": 4.2,
+        "length_mm": 2300,
+        "width_mm": 1400,
+        "height_mm": 1500,
+        "robot_mass_kg": 1250,
+        "navigation": "мультисенсорный автопилот",
+        "throughput_per_h": 25,
+        "throughput_unit": "рейсов/ч"
+      }
+    },
+    {
+      "match": [
+        "evocargo"
+      ],
+      "model": "EVOCARGO N1",
+      "specs": {
+        "payload_kg": 2000,
+        "pallets_capacity": 6,
+        "range_km": 175,
+        "charge_min": 30,
+        "battery_kwh": 36,
+        "length_mm": 5000,
+        "width_mm": 1800,
+        "height_mm": 2200,
+        "speed_ms": 6.2,
+        "navigation": "автопилот 4-5 уровня",
+        "throughput_per_h": 20,
+        "throughput_unit": "рейсов/ч"
+      }
+    },
+    {
+      "match": [
+        "ronavi sd"
+      ],
+      "model": "Ronavi SD",
+      "specs": {
+        "payload_kg": 10,
+        "robot_mass_kg": 20,
+        "length_mm": 420,
+        "width_mm": 400,
+        "height_mm": 200,
+        "speed_ms": 2.5,
+        "navigation": "QR-метки",
+        "runtime_h": 10,
+        "min_aisle_mm": 700,
+        "positioning_mm": 3,
+        "throughput_per_h": 120,
+        "throughput_unit": "доставок/ч"
+      }
+    },
+    {
+      "match": [
+        "pudubot",
+        "pudu"
+      ],
+      "model": "PuduBot 2",
+      "specs": {
+        "payload_kg": 10,
+        "robot_mass_kg": 39,
+        "length_mm": 580,
+        "width_mm": 535,
+        "height_mm": 1290,
+        "runtime_h": 12,
+        "charge_h": 4,
+        "min_aisle_mm": 800,
+        "speed_ms": 0.85,
+        "navigation": "VSLAM и лазерный SLAM",
+        "throughput_per_h": 15,
+        "throughput_unit": "доставок/ч"
+      }
+    }
+  ],
+  "subtype_defaults": {
+    "AMR": {
+      "throughput_per_h": 90,
+      "throughput_unit": "паллет/ч",
+      "width_mm": 700,
+      "speed_ms": 1.5
+    },
+    "FMR": {
+      "throughput_per_h": 50,
+      "throughput_unit": "паллет/ч",
+      "width_mm": 1975,
+      "speed_ms": 1.5
+    },
+    "Робот-уборщик": {
+      "throughput_per_h": 1000,
+      "throughput_unit": "м²/ч",
+      "width_mm": 610
+    },
+    "Робот уборщик": {
+      "throughput_per_h": 1000,
+      "throughput_unit": "м²/ч",
+      "width_mm": 610
+    },
+    "Беспилотный тягач": {
+      "throughput_per_h": 25,
+      "throughput_unit": "рейсов/ч",
+      "width_mm": 1400
+    },
+    "Робот-штабелер": {
+      "throughput_per_h": 45,
+      "throughput_unit": "паллет/ч",
+      "width_mm": 1200
+    },
+    "Роботизированная тележка": {
+      "throughput_per_h": 60,
+      "throughput_unit": "паллет/ч",
+      "width_mm": 800
+    }
+  }
+}
