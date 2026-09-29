@@ -4,6 +4,14 @@
 
 Пользователь выбирает объект (склад, аэропорт, медучреждение или свой) и операцию, вводит или загружает параметры. Платформа подбирает решения из каталога и объясняет, почему каждое подходит или исключено. Затем она считает парк роботов, CAPEX, OPEX, эффект, окупаемость, ROI и TCO по трём сценариям (без роботизации, покупка, RaaS), показывает чувствительность и what-if и проигрывает смену на 2D-схеме объекта. Имитация на схеме подтверждает расчёт: это та же модель, по которой сервер определил парк. В конце сохраняется проект и выгружается отчёт PDF/Excel.
 
+
+## Требования
+
+- Python 3.11 или 3.12 (НЕ 3.13+)
+- Node.js 18+
+- Docker Desktop с WSL2 (для Windows)
+- Git
+
 ## Быстрый запуск
 
 Нужен Docker с Compose.
@@ -11,7 +19,7 @@
 ```bash
 git clone https://github.com/kristinapotapina19/robofit.git
 cd robofit
-cp .env.example .env
+cp .env.example .env    # Windows CMD: copy .env.example .env
 docker compose up --build
 ```
 
@@ -21,7 +29,10 @@ docker compose up --build
 | API, Swagger | http://localhost:8000/docs |
 | OpenAPI | http://localhost:8000/openapi.json |
 
-Демо-учётки: пользователь `user@demo` / `demo123`, администратор `admin@demo` / `admin123`. Без входа доступны каталог, подбор, расчёт и отчёт.
+Демо-учётки: 
+-пользователь `user@demo` / `demo123`
+-администратор `admin@demo` / `admin123`
+Без входа доступны каталог, подбор, расчёт и отчёт.
 
 Интернет для работы не нужен: каталог и демо-датасеты организатора загружаются из репозитория (п. 4.2.7 ТЗ). Если PostgreSQL недоступна, API переключается на файловое хранилище и продолжает работать.
 
@@ -32,12 +43,33 @@ docker build -t robofit .
 docker run -p 8000:8000 robofit        # интерфейс и API на http://localhost:8000
 ```
 
-### Без Docker
+### Запуск без Docker
 
-```bash
-cd backend && pip install -r requirements.txt && DATABASE_URL= uvicorn app.main:app --reload
-cd frontend && npm install && npm run dev         # http://localhost:5173
-```
+Linux / macOS / WSL
+  # Backend
+  cd backend
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  DATABASE_URL= uvicorn app.main:app --reload
+
+  # Frontend (в новом окне терминала)
+  cd frontend
+  npm install
+  npm run dev  # → http://localhost:5173
+
+Windows (CMD)
+  # Backend
+  cd backend
+  python -m venv venv
+  venv\Scripts\activate
+  pip install -r requirements.txt
+  set DATABASE_URL=uvicorn app.main:app --reload
+
+  # Frontend (в новом окне CMD)
+  cd frontend
+  npm install
+  npm run dev
 
 ### Проверка расчётного ядра и пример отчёта
 
