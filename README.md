@@ -46,7 +46,7 @@ docker run -p 8000:8000 robofit        # интерфейс и API на http://l
 ### Запуск без Docker
 
 Linux / macOS / WSL
-  # Backend
+  #### Backend
   cd backend
   python3 -m venv venv
   source venv/bin/activate
