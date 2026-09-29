@@ -45,7 +45,7 @@ docker run -p 8000:8000 robofit        # интерфейс и API на http://l
 
 ## Запуск без Docker
 
-Linux / macOS / WSL
+```Linux / macOS / WSL
   ### Backend
   cd backend
   python3 -m venv venv
@@ -57,6 +57,7 @@ Linux / macOS / WSL
   cd frontend
   npm install
   npm run dev  # → http://localhost:5173
+  ```
 
 Windows (CMD)
   ### Backend
