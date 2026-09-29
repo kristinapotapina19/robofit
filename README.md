@@ -68,7 +68,8 @@ Windows (CMD)
   python -m venv venv
   venv\Scripts\activate
   pip install -r requirements.txt
-  set DATABASE_URL=uvicorn app.main:app --reload
+  set DATABASE_URL=
+  uvicorn app.main:app --reload
 
   # Frontend (в новом окне CMD)
   cd frontend
