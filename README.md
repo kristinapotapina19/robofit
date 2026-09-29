@@ -45,15 +45,15 @@ docker run -p 8000:8000 robofit        # интерфейс и API на http://l
 
 ## Запуск без Docker
 
-```Linux / macOS / WSL
-  ### Backend
+Linux / macOS / WSL
+  ```# Backend
   cd backend
   python3 -m venv venv
   source venv/bin/activate
   pip install -r requirements.txt
   DATABASE_URL= uvicorn app.main:app --reload
 
-  ### Frontend (в новом окне терминала)
+  # Frontend (в новом окне терминала)
   cd frontend
   npm install
   npm run dev  # → http://localhost:5173
